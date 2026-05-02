@@ -16,7 +16,7 @@ export default function home(){
     async function generateTweets(){
         setLoading(true);
 
-        const response = await fetch('http://localhost:3000/generate', {
+        const response = await fetch('https://tweet-generator-2zsf.onrender.com/generate', {
             method: 'POST',
             headers: {
                 "content-type": "application/json"
