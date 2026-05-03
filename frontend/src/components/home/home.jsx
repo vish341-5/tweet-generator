@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import './home.css'
 
+const VITE_API_URL = import.meta.env.VITE_API_URL;
+
 export default function home(){
 
     const [input, setInput]= useState('');
@@ -16,7 +18,7 @@ export default function home(){
     async function generateTweets(){
         setLoading(true);
 
-        const response = await fetch('https://tweet-generator-2zsf.onrender.com/generate', {
+        const response = await fetch(VITE_API_URL, {
             method: 'POST',
             headers: {
                 "content-type": "application/json"

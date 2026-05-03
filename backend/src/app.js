@@ -8,8 +8,11 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use('/', homeRoutes);
+app.use('/home', homeRoutes);
 
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+})
 
 
 
